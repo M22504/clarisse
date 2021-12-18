@@ -1,0 +1,9 @@
+{
+    "name": "Clarisse",
+    "description": "Declutters the web for the Mentally Disabled",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+    }
+}
