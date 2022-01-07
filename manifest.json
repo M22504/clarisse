@@ -1,6 +1,6 @@
 {
     "name": "clarisse",
-    "description": "Declutters the web for the Mentally Disabled",
+    "description": "Declutters the web for you",
     "version": "1.0",
     "manifest_version": 3,
     "background": {

@@ -1,3 +1,3 @@
 # clarisse
 
-Decluttering the web since 2021
+Decluttering the web

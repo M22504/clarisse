@@ -1,160 +1,167 @@
 initial_body = document.body
 console.log(initial_body);
 
-//Load blackpeoplemeet html
+//Load beats per minute html
 var bpm_html = `
 <!DOCTYPE html>
-<html lang="en">
-<head id="Head1">
-    
-    <style>
-        div.loader2.hidden {
-            display: none;
+<html data-darkreader-mode="dynamic" data-darkreader-scheme="dark"><head><style class="darkreader darkreader--fallback" media="screen"></style><style class="darkreader darkreader--text" media="screen"></style><style class="darkreader darkreader--invert" media="screen">.jfk-bubble.gtx-bubble, .captcheck_answer_label > input + img, span#closed_text > img[src^="https://www.gstatic.com/images/branding/googlelogo"], span[data-href^="https://www.hcaptcha.com/"] > #icon, #bit-notification-bar-iframe, ::-webkit-calendar-picker-indicator {
+    filter: invert(100%) hue-rotate(180deg) contrast(90%) !important;
+}</style><style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}
+[data-darkreader-inline-stopcolor] {
+  stop-color: var(--darkreader-inline-stopcolor) !important;
+}</style><style class="darkreader darkreader--variables" media="screen">:root {
+   --darkreader-neutral-background: #131516;
+   --darkreader-neutral-text: #d8d4cf;
+   --darkreader-selection-background: #004daa;
+   --darkreader-selection-text: #e8e6e3;
+}</style><style class="darkreader darkreader--root-vars" media="screen"></style><style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #181a1b !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #181a1b;
+}
+html, body, input, textarea, select, button {
+    border-color: #736b5e;
+    color: #e8e6e3;
+}
+a {
+    color: #3391ff;
+}
+table {
+    border-color: #545b5e;
+}
+::placeholder {
+    color: #b2aba1;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #555b00 !important;
+    color: #e8e6e3 !important;
+}
+::-webkit-scrollbar {
+    background-color: #202324;
+    color: #aba499;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #454a4d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #575e62;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #484e51;
+}
+::-webkit-scrollbar-corner {
+    background-color: #181a1b;
+}
+* {
+    scrollbar-color: #454a4d #202324;
+}
+::selection {
+    background-color: #004daa !important;
+    color: #e8e6e3 !important;
+}
+::-moz-selection {
+    background-color: #004daa !important;
+    color: #e8e6e3 !important;
+}</style>
+    <title>Example Domain</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+    body {
+        background-color: #f0f0f2;
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        
+    }
+    div {
+        width: 600px;
+        margin: 5em auto;
+        padding: 2em;
+        background-color: #fdfdff;
+        border-radius: 0.5em;
+        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
+    }
+    a:link, a:visited {
+        color: #38488f;
+        text-decoration: none;
+    }
+    @media (max-width: 700px) {
+        div {
+            margin: 0 auto;
+            width: auto;
         }
-    </style>
+    }
+    </style><style class="darkreader darkreader--sync" media="screen"></style>    
+<meta id="Reverso_extension___elForCheckedInstallExtension" name="Reverso extension" content="2.2.203"><meta name="darkreader" content="f6992bc28c024a20c2c0b600a1d82a36"><style class="darkreader darkreader--override" media="screen">.vimvixen-hint {
+    background-color: #7b5300 !important;
+    border-color: #d8b013 !important;
+    color: #f3e8c8 !important;
+}
+::placeholder {
+    opacity: 0.5 !important;
+}
+a[href="https://coinmarketcap.com/"] > svg[width="94"][height="16"] > path {
+    fill: var(--darkreader-neutral-text) !important;
+}
+#edge-translate-panel-body,
+.MuiTypography-body1 {
+    color: var(--darkreader-neutral-text) !important;
+}
+gr-main-header {
+    background-color: #0f3a48 !important;
+}</style></head>
 
-    <link href="https://cp.peoplemedia.com/site/general/pm1897/styles2.css" rel="stylesheet" />
-
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-
-
-    <link rel="shortcut icon" href="https://pmi.peoplemedia.com/pmicontent/22/images/favicon.ico" type="image/x-icon" />
-<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://pmi.peoplemedia.com/pmicontent/22/images/apple-touch-icon-57x57.png" />
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://pmi.peoplemedia.com/pmicontent/22/images/apple-touch-icon-72x72.png" />
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://pmi.peoplemedia.com/pmicontent/22/images/apple-touch-icon-114x114.png" />
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://pmi.peoplemedia.com/pmicontent/22/images/apple-touch-icon-144x144.png" />
-
-</head>
-<body id="pageBody" class="layout-desktop ">
-    <div class="loader2 hidden">
-        <div class="bg"></div>
-        <div class="spinner default-image" aria-label="Please wait....">
-            <div class="lottie-container"></div>
-        </div>
-    </div>
-    
-
-
-
-
-
-
-<div id="profiles">
-<div id="topprofiles">
-<img src="https://cp.peoplemedia.com/site/general/pm1897/images/w1.jpg" alt="BlackPeopleMeet woman one" />
-<img src="https://cp.peoplemedia.com/site/general/pm1897/images/nm1.jpg" alt="BlackPeopleMeet man one" />
-<img src="https://cp.peoplemedia.com/site/general/pm1897/images/w2.jpg" alt="BlackPeopleMeet woman two" />
-<img src="https://cp.peoplemedia.com/site/general/pm1897/images/nm2glasses.jpg" alt="BlackPeopleMeet man two" />
-
+<body>
+<div>
+    <h1>Example Domain</h1>
+    <p>This domain is for use in illustrative examples in documents. You may use this
+    domain in literature without prior coordination or asking for permission.</p>
+    <p><a href="https://www.iana.org/domains/example" data-hydrus="DONE">More information...</a></p>
 </div>
 
-<div id="middle">
-  <div class="loginlinkplace">
-       <div class="loginlink"><p class="memberlink">   
-      <a href="/v3/login">Member log in</a>
-      </p>
-      </div></div>
-      <div id="logo">
-     <img src="https://cp.peoplemedia.com/site/general/pm1897/images/logo.png" alt="BlackPeopleMeet logo" />
-      </div>
-      <h1 id="headline">Meet other Black singles in your area</h1>
-      
-      <div id="regarea">
-      <div id="regareatop">
-      <h2 class="sevendays">SIGN UP <strong>FREE</strong> AND BROWSE
-      </h2>
-      </div>
-      <div id="regareabottom">
-      <div class="selectcenter">
-	  <label for="ddlGenderCombined" style="display:none;">Your gender and the gender you are seeking</label>
-      <select name="ddlGenderCombined" id="ddlGenderCombined">
-                                    <option value="12">I'm a man seeking women</option>
-                                    <option value="21">I'm a woman seeking men</option>
-                                    <option value="11">I'm a man seeking men</option>
-                                    <option value="22">I'm a woman seeking women</option>
-                                </select>
-                                </div>
-                                  <p class="cta">
-<a class="button_style defaultButton" id="imgFreeBrowse" title="Search Now">Search Now ››</a>
-</p>
-      </div>
-      </div>
-      
-</div>
 
-<div id="bottomprofiles">
-<img src="https://cp.peoplemedia.com/site/general/pm1897/images/nm2.jpg" alt="BlackPeopleMeet man three" />
-<img src="https://cp.peoplemedia.com/site/general/pm1897/images/nw1.jpg" alt="BlackPeopleMeet woman three" />
-<img src="https://cp.peoplemedia.com/site/general/pm1897/images/nm3.jpg" alt="BlackPeopleMeet man four" />
-<img src="https://cp.peoplemedia.com/site/general/pm1897/images/nw2.jpg" alt="BlackPeopleMeet woman four" />
-</div>
-
-<div id="appdiv">
-    <div id="appdivleft">
-    <img src="https://cp.peoplemedia.com/site/general/pm1897/images/app.jpg" style="width:100%;" alt="BlackPeopleMeet App Mobile Phone" />
-    </div>
-     <div id="appdivright">
-     <h2>
-     Download our <strong>FREE app</strong> to:</h2>
-     <ul>
-     <li><span>&#9679;</span>&nbsp;&nbsp;Send and receive emails and flirts</li>
-     <li><span>&#9679;</span>&nbsp;&nbsp;View profiles and photos</li>
-     <li><span>&#9679;</span>&nbsp;&nbsp;See who's been checking you out</li>
-     <li><span>&#9679;</span>&nbsp;&nbsp;And much more...</li>
-     </ul>
-     
-     <div id="appdivimg"><a href="https://play.google.com/store/apps/details?id=com.peoplemedia.blackpeoplemeet"  ><img src="https://cp.peoplemedia.com/site/general/221796/images/android.png" border="0" alt="Android App on Google Play" /></a>
-     </div>
-     
-     <div id="appdivimg2"><a href="https://itunes.apple.com/us/app/black-people-meet-1-dating/id1009499861?mt=8"  ><img src="https://cp.peoplemedia.com/site/general/221796/images/apple.png" border="0" alt="Apple Download on the App Store" /></a>
-     </div>
-
-
-
-    </div>
-    </div>
-    
-    <div id="meetingdiv">
-<div id="meetingdivtop">
-<h2>Tips for <strong>meeting offline</strong></h2>
-<h3>First meetings are exciting, and normally are perfectly safe. However, always take precautions and use the following guidelines:</h3>
-</div>
-<div id="meetingdivclear">
-
-<ul>
-     <li><span>&#9679;</span>&nbsp;&nbsp;Always meet in public. Meet for the first time in a populated, public location — never in a private or remote location.</li>
-     <li><span>&#9679;</span>&nbsp;&nbsp;Tell a friend. Inform a friend or family member of your plans and when and where you're going. If you own a mobile phone, make sure you have it with you.</li>
-     <li><span>&#9679;</span>&nbsp;&nbsp;Stay sober. Do not do anything that would impair your judgment and cause you to make a decision you could regret.</li>
-     <li><span>&#9679;</span>&nbsp;&nbsp;Drive yourself to and from the first meeting. Just in case things don't work out, you need to be in control of your own ride — even if that means taking a taxi.</li>
-     </ul>
-
-</div>
-</div>
-
-      <div id="redesignfooter">
-        <p>
-            Copyright © 2022 People Media. All rights reserved. 22X2703. <a href="/v3/termsandconditions">Terms of Use</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/v3/privacypolicy">Privacy Policy</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/v3/datingtips">Safety Tips</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/v3/cookiepolicy">Cookie Policy</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/v3/security">Security</a>
-        </p>
-    </div>
-  <div id="links">
-    <p> <a href="/?notrack">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/v3/datingtips">Safe Dating Tips</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-<a href="/v3/guidelines">Guidelines</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/v3/help">Contact Us</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/v3/billing">Billing</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/v3/successstories">Success Stories</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://www.match.com/cp/careers/CurrentOpenings.html"  >Careers</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/v3/aboutonlinedating">About</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://www.matchmediagroup.com"  >Advertise with Us</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://www.peoplemedia.com/Affiliates"  >Become an Affiliate</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/v3/externalsearch">Search</a>&nbsp;&nbsp;|&nbsp;&nbsp; <a href="/v3/sitemap">site map</a><br />
-      </p>
-    <p id="footerlinks" ><a href="https://www.match.com"  >Match.com</a>, <a href="https://www.chemistry.com"  >Chemistry.com</a>, <a href="https://www.ourtime.com"  >OurTime.com</a>, <a href="https://www.loveandseek.com"  >LoveAndSeek.com</a>, <a href="https://www.bbpeoplemeet.com"  >BBPeopleMeet.com</a></p>
-  </div>
-  <div id="legalsearch"> BlackPeopleMeet.com is the premier online dating service for black singles. Black singles are online now in our large and active community for dating. BlackPeopleMeet.com is designed for dating, pen pals and to bring black singles together. Join BlackPeopleMeet.com and meet new black singles for friendship and dating. BlackPeopleMeet.com is a niche dating service for single black women and single black men. Become a member of BlackPeopleMeet.com and learn more about meeting your black match online. Dating works better with BlackPeopleMeet.com! - BlackPeopleMeet.com WorldWideWeb pages are copyrighted by People Media. BlackPeopleMeet.com's webpages and content may not be reproduced in any form without the expressed consent of People Media © 2000 - 2022.
-  </div>
-
-  </div>
-
-    <form id="lpsrvt">
-        <input name="__RequestVerificationToken" type="hidden" value="Wg8A82xyurZxUbwS0oxDrMcSJLEE7YbnjZSEHfHCObGYWNN70xdcpC56eC9dcYWTMSwP-MCVtTtuoedGWH5zZggpGys1" />
-    </form>
-
-
-</body>
-</html>
-
+</body></html>
 `;
 
 //Replace content of webpage
