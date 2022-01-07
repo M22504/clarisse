@@ -1,9 +1,19 @@
 {
-    "name": "Clarisse",
+    "name": "clarisse",
     "description": "Declutters the web for the Mentally Disabled",
     "version": "1.0",
     "manifest_version": 3,
     "background": {
         "service_worker": "background.js"
-    }
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://*/*"],
+            "js": ["content.js"]
+        }
+    ],
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ]
 }

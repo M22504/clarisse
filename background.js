@@ -1,1 +1,1 @@
-//Code to process the web page
+console.log("hello world");
