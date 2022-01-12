@@ -2,54 +2,44 @@ initial_body = document.body
 console.log(initial_body);
 
 //Load beats per minute html
-var bpm_html = `
-<!doctype html>
-<html>
-<head>
-    <title>Example Domain</title>
 
-    <meta charset="utf-8" />
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style type="text/css">
-    body {
-        background-color: #f0f0f2;
-        margin: 0;
-        padding: 0;
-        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        
-    }
-    div {
-        width: 600px;
-        margin: 5em auto;
-        padding: 2em;
-        background-color: #fdfdff;
-        border-radius: 0.5em;
-        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
-    }
-    a:link, a:visited {
-        color: #38488f;
-        text-decoration: none;
-    }
-    @media (max-width: 700px) {
-        div {
-            margin: 0 auto;
-            width: auto;
-        }
-    }
-    </style>    
-</head>
+// Strip css from website
 
-<body>
-<div>
-    <h1>Example Domain</h1>
-    <p>This domain is for use in illustrative examples in documents. You may use this
-    domain in literature without prior coordination or asking for permission.</p>
-    <p><a href="https://www.iana.org/domains/example">More information...</a></p>
-</div>
-</body>
-</html>
-`;
+const cssutil = {
+	stripStylesheets: function() {
+		const elements = document.querySelectorAll('link[rel=stylesheet]');
+		for (let i = 0; i < elements.length; i++) {
+			elements[i].parentNode.removeChild(elements[i]);
+		}
+		[].slice.call(document.getElementsByTagName('style')).forEach(function(el) {
+			el.parentNode.removeChild(el);
+		});
+	},
+	stripInline: function() {
+		[].slice.call(document.getElementsByTagName('*')).forEach(function (el) {
+			el.style = "";
+			if(el.hasAttribute("bgColor")) {
+				el.removeAttribute("bgColor");
+			}
+		});
+	},
+	stripAll: function() {
+		this.stripStylesheets()
+		this.stripInline()
+	},
+	applyStyle: function() {
+		const styleElement = document.createElement('style');
+		styleElement.type = 'text/css';
+		styleElement.href = "https://taniarascia.github.io/primitive/css/main.css";
+		document.head.appendChild(styleElement);
+	},
+	init: function() {
+		this.stripAll();
+		this.applyStyle();
+	},
+}
 
 //Replace content of webpage
-document.write(bpm_html);
+window.onload = function() {
+	cssutil.init()
+}
